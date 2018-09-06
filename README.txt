@@ -1,0 +1,1 @@
+'friends' is a simple React App
