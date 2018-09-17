@@ -1,15 +1,29 @@
-import React from 'react'
+import React from 'react';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
+  import { ListGroup, ListGroupItem } from 'reactstrap';
+
 
 class ShowList extends React.Component {
   render() {
     return(
-      <div>
-        <h3> Friends </h3>
-
-       <ul>
-       {this.props.names.map((friend) => { return <li>{friend}</li>})}
-       </ul>    
-      </div>
+      
+        <div className="ShowList">
+        <Card>
+        
+        <CardBody>
+          <CardTitle>Friends</CardTitle>
+          
+          
+             <ListGroup>
+       {this.props.names.map((friend) => { return  <ListGroupItem>{friend} </ListGroupItem>})}
+            </ListGroup>
+        </CardBody>
+      </Card>
+      
+        
+       </div>    
+      
         
       )
   }

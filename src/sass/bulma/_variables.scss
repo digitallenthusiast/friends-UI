@@ -1,0 +1,6 @@
+@import '../../../node_modules/bulma/sass/utilities/initial-variables.sass';
+
+// ADD HERE variables you want to override
+$primary: #f4f4f4;
+
+@import '../../../node_modules/bulma/sass/utilities/_all.sass';

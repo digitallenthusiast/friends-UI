@@ -1,6 +1,9 @@
-import React from 'react'
-import AddFriend from './AddFriend.js'
-import ShowList from './ShowList'
+import React from 'react';
+import AddFriend from './AddFriend.js';
+import ShowList from './ShowList.js';
+import header from '../img/me_rgb.png';
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 class FriendsContainer extends React.Component {
   constructor(props) {
@@ -26,13 +29,22 @@ class FriendsContainer extends React.Component {
 
   render() {
     return (
-      <div>
-      <img />
-        <h4> {this.state.nickname} <br />
-
-        {this.state.name}</h4>
-        <AddFriend addNew={this.addFriend} />
+      <div className="Friends">
+      <Card>
+        <CardImg top width="100%" src="" alt="header" />
+        <CardBody>
+          <CardTitle>{this.state.nickname}</CardTitle>
+          <CardSubtitle>{this.state.name}</CardSubtitle>
+          <CardText>Inspiration is like the Sunshining</CardText>
+          <Button color="primary"><i className="fa fa-twitter-square fa-2x" aria-hidden="true">
+</i></Button>
+        </CardBody>
+      </Card>
+      <br />
+        <AddFriend  addNew={this.addFriend} />
+        <br />
         <ShowList names={this.state.friends} />
+        
       </div>
 
       )

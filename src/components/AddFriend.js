@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import { Button } from 'reactstrap';
 class AddFriend extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,23 @@ class AddFriend extends React.Component {
   }
 render() {
   return (
-    <div>
-      <input 
+    <div className="AddFriend">
+    <InputGroup>
+        <Input placeholder="Add Friend"
         type="text"
         value={this.state.newFriend}
         onChange={this.updateNewFriend}
-      />
-      <button onClick={this.handleAddNew}> Add </button>
+         />
+         <Button color="success" onClick={this.handleAddNew}>Add</Button>{' '}
+      {/*  <button className="AddFriend-button" onClick={this.handleAddNew}> Add </button>
+         */}
+      </InputGroup>
+     {/* <input 
+        type="text"
+        value={this.state.newFriend}
+        onChange={this.updateNewFriend}
+      />*/}
+      
 
     </div>
     )

@@ -1,5 +1,56 @@
+
 .App {
-  text-align: center;
+
+  .container-fluid {
+    margin-left:0px;
+    padding-left: 0px;
+    height: auto;
+
+  }
+  
+  
+}
+
+.Friends {
+  
+
+  .card-img-top {
+    background-color: red;
+  }
+}
+.ShowList {
+  @import 'sass/components/ShowList';
+
+
+}
+.AddFriend {
+  @import 'sass/components/AddFriend';
+}
+
+
+.App-parent {
+  position:relative;
+  top: 0;
+  left: 0;
+
+}
+
+.App-bg {
+  background-image: cover;
+  position:relative;
+  top: 0;
+  left: 0;
+}
+.App-bg_vector {
+   position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.App-container {
+  position: absolute;
+  top: 200px;
+  padding-left:30px;
+ 
 }
 
 .App-logo {
@@ -9,20 +60,27 @@
 
 .App-header {
   background-color: lighten(red, 20%);
-  height: 150px;
+  height: 100%;
   padding: 20px;
   color: white;
 }
+.App-decoration {
+  background-color: lighten(red, 30%);
+  
+}
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3.5em;
+  margin-top: 40%;
 }
 
 .App-intro {
   font-size: large;
+  color: #191919;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
